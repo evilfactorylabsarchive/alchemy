@@ -1,0 +1,17 @@
+[
+  {
+    "id": "some-id",
+    "title": "some title",
+    "canonical": "https://evilfactorylabs.org",
+    "excerpt": "some excerpt",
+    "image": "https://evilfactorylabs.org/img/post.png",
+    "timestamp": 1337,
+    "author": {
+      "id": "some-author-id",
+      "name": "some author name",
+      "url": "https://evilfactorylabs.org",
+      "twitter": "evilfactorylabs",
+      "avatar": "https://evilfactorylabs.org/img/author.png"
+    }
+  }
+]
