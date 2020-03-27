@@ -73,6 +73,35 @@ For now the user stories are:
 
 I will set the priority to make the release faster.
 
+## Development
+
+I think using TDD-ish approach in development is the best way to work with developers in *distributed* team.
+So here is the detail:
+
+- Someone is writing a test (so the test will be fail)
+- Someone is writing a code (to make the test pass)
+
+The workflow is:
+
+Run the test:
+
+```bash
+yarn test --watch
+```
+
+You will see the failed test, right? So, make it pass by writing some code that *driven* by the existing tests.
+
+```bash
+yarn dev
+```
+
+If there is no failed tests anymore, feel free to push your changes.
+
+> Tips: add `--coverage` to make sure your code is 100% covered by the test. The minimum threshold is > 90%,
+because why not.
+
+Currently the "domain expert" of this project is [me](https://github.com/faultable), so, yeah, you got the point.
+
 ## Contributing
 
 This works *happen* privately on our Basecamp, but I don't want to limit anyone. If you are interested in helping this project,
