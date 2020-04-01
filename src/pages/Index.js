@@ -1,15 +1,17 @@
-import fetch from '../libs/fetch'
-import rssFetcher from './api/feed'
-import Layout from '../components/MyLayout'
-import Post from '../components/Post'
+import fetcher from '~/libs/fetch'
+import useSWR from 'swr'
 
-const Index = (props) => {
+import Layout from '~/components/MyLayout'
+import Post from '~/components/Post'
+
+const index = () => {
+  const { data } = useSWR('/api/feed', fetcher)
+
   return (
     <Layout>
       <div className='to-render'>
-        {props.timeline.map((eachEntry) => (
-          <Post key={eachEntry.id} {...eachEntry} />
-        ))}
+        {data &&
+          data.map((eachEntry) => <Post key={eachEntry.id} {...eachEntry} />)}
       </div>
 
       <style jsx>
@@ -23,12 +25,34 @@ const Index = (props) => {
   )
 }
 
-Index.getInitialProps = async () => {
-  const res = await fetch('https://alchemy.edgy-network.workers.dev')
+export default index
 
-  return {
-    timeline: res,
-  }
-}
+// import fetcher from "~/libs/fetch"
+// import useSWR from "swr";
+// import Layout from "../components/MyLayout"
+// import Post from "../components/Post"
 
-export default Index
+// const index = (props) => {
+
+//   const { data } = useSWR("/api/feed", fetcher);
+
+//   return (
+//     <Layout>
+//       <div className='to-render'>
+//         {data.map((eachEntry) => (
+//           <Post key={eachEntry.id} {...eachEntry} />
+//         ))}
+//       </div>
+
+//       <style jsx>
+//         {`
+//           .to-render {
+//             margin-top: 80px;
+//           }
+//         `}
+//       </style>
+//     </Layout>
+//   )
+// }
+
+// export default index

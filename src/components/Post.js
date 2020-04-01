@@ -44,7 +44,13 @@ const Post = (props) => {
               <Link href='/users/[name]' as={`/users/${props.author.name}`}>
                 <strong>{props.author.name}</strong>
               </Link>
-              {props.title}
+              <a
+                href={props.canonical}
+                target='_blank'
+                className='post-caption-title'
+              >
+                <span>{props.title}</span>
+              </a>
             </div>
             <div className='excerpt'>{props.excerpt}</div>
             <div className='timestamp'>{postTime}</div>
@@ -90,6 +96,7 @@ const Post = (props) => {
             font-size: 11px;
             padding-bottom: 20px 0px 15px 10px;
             text-decoration: none;
+            color: black;
           }
           .post-image {
             width: 100%;
@@ -108,6 +115,11 @@ const Post = (props) => {
             margin-right: 5px;
             text-decoration: none;
             cursor: pointer;
+          }
+          .post-caption-title {
+            text-decoration: none;
+            cursor: pointer;
+            color: black;
           }
           .excerpt {
             font-size: 13px;
