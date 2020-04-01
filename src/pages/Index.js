@@ -1,7 +1,6 @@
-import fetch from 'isomorphic-unfetch'
-
+import fetch from '../libs/fetch'
+import rssFetcher from './api/feed'
 import Layout from '../components/MyLayout'
-import Link from 'next/link'
 import Post from '../components/Post'
 
 const Index = (props) => {
@@ -26,10 +25,9 @@ const Index = (props) => {
 
 Index.getInitialProps = async () => {
   const res = await fetch('https://alchemy.edgy-network.workers.dev')
-  const data = await res.json()
 
   return {
-    timeline: data,
+    timeline: res,
   }
 }
 
