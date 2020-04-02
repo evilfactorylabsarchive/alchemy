@@ -1,16 +1,13 @@
 import Link from 'next/link'
 import ProfileIcon from './ProfileIcon'
 
-class Header extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      name: 'evilfactorylabs blog',
-      avatar: 'https://avatars1.githubusercontent.com/u/43804217?s=200&v=4',
-    }
+const Header = () => {
+  // since I don't see any code that *mutating* the state, I assume this is not a dynamic data
+  const state = {
+    name: 'evilfactorylabs blog',
+    avatar: 'https://avatars1.githubusercontent.com/u/43804217?s=200&v=4',
   }
-
-  render() {
+  
     return (
       <div className='header'>
         <div className='header-menus'>
