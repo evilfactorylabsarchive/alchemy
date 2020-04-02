@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ProfileIcon from './ProfileIcon'
+import ProfileIcon from '~/components/ProfileIcon'
 
 const Header = () => {
   // since I don't see any code that *mutating* the state, I assume this is not a dynamic data
