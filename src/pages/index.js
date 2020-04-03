@@ -1,6 +1,5 @@
 import fetcher from '~/libs/fetch'
 import useSWR from 'swr'
-
 import Layout from '~/components/MyLayout'
 import Post from '~/components/Post'
 
