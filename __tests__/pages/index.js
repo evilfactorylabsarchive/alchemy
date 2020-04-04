@@ -2,7 +2,7 @@ import { render, cleanup, waitFor } from '@testing-library/react'
 
 import useSWR from 'swr'
 
-import Index from '~/pages/Index'
+import Index from '~/pages/index'
 import fetcher from '~/libs/fetch'
 import feedMocks from '../mocks/feed'
 
