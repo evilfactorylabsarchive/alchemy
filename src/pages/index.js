@@ -13,8 +13,12 @@ const index = () => {
           data.map((eachEntry) => <Post key={eachEntry.id} {...eachEntry} />)}
       </div>
 
-      <style jsx>
+      <style jsx global>
         {`
+          body {
+            background-color: #f4f4f4;
+          }
+
           .to-render {
             margin-top: 80px;
           }

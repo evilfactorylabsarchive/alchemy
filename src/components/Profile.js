@@ -16,7 +16,15 @@ const Profile = (props) => {
 
           <div className='profile-data'>
             <div className='profile-username'>{data[0].author.name}</div>
-            <div className='profile-url'>{data[0].author.url}</div>
+            <div className='profile-url'>
+              <a
+                href={data[0].author.url}
+                target='_blank'
+                className='the-profile-url'
+              >
+                <span>{data[0].author.url}</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -42,7 +50,7 @@ const Profile = (props) => {
         {`
           .profile {
             width: 100%;
-            background-color: #fff;
+            background-color: #f4f4f4;
             margin-top: 100px;
           }
           .profile-menus {
@@ -81,7 +89,10 @@ const Profile = (props) => {
             margin-bottom: 5px;
             font-family: 'PT Sans', sans-serif;
             font-weight: bold;
+          }
+          .the-profile-url {
             color: rgb(60, 108, 186);
+            text-decoration: none;
           }
           .post-title {
             margin-top: 15px;
@@ -101,8 +112,10 @@ const Profile = (props) => {
             height: 250px;
             padding: 16px 16px;
             border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
             position: relative;
+            background-color: white;
           }
           .post-pic {
             max-height: 100%;

@@ -17,6 +17,14 @@ const ProfilePage = (props) => {
           })}
         />
       ) : null}
+
+      <style jsx global>
+        {`
+          body {
+            background-color: #f4f4f4;
+          }
+        `}
+      </style>
     </Layout>
   )
 }
