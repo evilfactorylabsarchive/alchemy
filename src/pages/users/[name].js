@@ -17,6 +17,7 @@ const ProfilePage = (props) => {
           })}
         />
       ) : null}
+      
     </Layout>
   )
 }

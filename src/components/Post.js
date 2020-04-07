@@ -62,15 +62,16 @@ const Post = (props) => {
         {`
           .post {
             width: 100%;
-            background-color: #fff;
             margin-bottom: 60px;
           }
           .post-menus {
-            width: 50%;
+            width: 35%;
             margin-left: 14%;
             border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
+            background-color: white;
           }
           .post-header {
             display: flex;
