@@ -18,7 +18,6 @@ const index = () => {
           body {
             background-color: #f4f4f4;
           }
-
           .to-render {
             margin-top: 80px;
           }

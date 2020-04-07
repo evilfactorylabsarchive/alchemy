@@ -17,7 +17,7 @@ const ProfilePage = (props) => {
           })}
         />
       ) : null}
-
+      
       <style jsx global>
         {`
           body {
